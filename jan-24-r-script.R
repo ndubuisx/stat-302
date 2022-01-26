@@ -1,4 +1,4 @@
-# Author: Emmanuel Ndubuisi; Date: Jan 19 2022; Purpose: Install R packages
+# Author: Emmanuel Ndubuisi; Date: Jan 24 2022; Purpose: National COVID Dataset
 
 install.packages("tidyverse")
 install.packages("ggplot2")
