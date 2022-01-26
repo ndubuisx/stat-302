@@ -31,3 +31,9 @@ is.numeric(data$death)
 
 # check the missing values
 is.na(data$death)
+
+# extract elemets of the summary output
+df <- data.frame(unclass(summary(data)))
+
+# column names of df
+names(df)
