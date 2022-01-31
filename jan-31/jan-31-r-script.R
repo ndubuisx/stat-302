@@ -15,3 +15,8 @@ options(scipen=999)
 # change axis labels 
 # x = "Number of Deaths", y = "Patients on Ventilator"
 plot(data$death, data$onVentilatorCurrently, xlab="Number of Deaths", ylab="Patients on Ventilator")
+
+# plotting with ggplot2
+library(ggplot2)
+# color based on the column states
+ggplot(data, aes(death, onVentilatorCurrently, colour=states)) + geom_point()
