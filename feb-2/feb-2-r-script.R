@@ -23,3 +23,9 @@ data = na.omit(data)
 
 # plotting on data without n/a values
 p1 <- ggplot(data, aes(x=death, y=onVentilatorCurrently)) + geom_bar(stat="identity")
+
+# adding colors to bars
+p2 <- ggplot(data, aes(x=death, y=onVentilatorCurrently)) + geom_bar(stat="identity", fill="red")
+
+# dding colors to bars (steelblue)
+p3 <- ggplot(data, aes(x=death, y=onVentilatorCurrently)) + geom_bar(stat="identity", fill="steelblue")
