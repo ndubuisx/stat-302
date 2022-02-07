@@ -14,3 +14,18 @@ options(scipen=999)
 
 # perform correlation analysis between states and death
 ggscatter(data, x="states", y="death", add="reg.line", conf.int = TRUE, cor.coef = TRUE, cor.method = "pearson", xlab="states", ylab="death")
+
+# R function to generate correlation value w/o library
+cor.test(data$states, data$death, method="pearson")
+
+# spearman correlation value
+cor.test(data$states, data$death, method="spearman")
+
+library(corrplot)
+
+data_2 <- data[1:20,]
+data_matrix <- data_2[,2:5]
+data_matrix <- as.matrix(data_matrix)
+
+res <- cor(data_matrix)
+corrplot(res, type = "upper", order="hclust", tl.col="black", tl.srt=45)
