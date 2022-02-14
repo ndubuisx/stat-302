@@ -1,8 +1,5 @@
 # Author: Emmanuel Ndubuisi; Date: Feb 2 2022; Purpose: To generate heat map on some sample
 
-# sets the working directory for script
-# setwd("")
-
 # load sample data called mtcars
 df <- mtcars
 
@@ -10,9 +7,13 @@ df <- mtcars
 head(df)
 dim(df)
 
-# convert to numerical method
-# without scaling -> error: x must be a numeric matrix.
-df <- scale(df)
-
 # generate head map using default R function.
-heatmap(df, scale="row")
+# cars clustered together have the same features.
+# without scaling -> error: x must be a numeric matrix.
+# scaling converts to numerical method.
+heatmap(scale(df), scale="row")
+
+# select rows that start with Fiat or Merc
+subset_df <- df[grep("^Fiat|^Merc", row.names(df)),]
+
+heatmap(scale(subset_df), scale = "row")
