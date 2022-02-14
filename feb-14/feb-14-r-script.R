@@ -16,4 +16,6 @@ heatmap(scale(df), scale="row")
 # select rows that start with Fiat or Merc
 subset_df <- df[grep("^Fiat|^Merc", row.names(df)),]
 
+# r.bind() -> row bind
+
 heatmap(scale(subset_df), scale = "row")
