@@ -25,9 +25,11 @@ df3 <- df3[,-1]
 # scale df3
 df <- scale(df3)
 
-
 # generate a color palette
 col <- colorRampPalette(brewer.pal(10, 'RdYlBu'))(256)
 
 # use function heatmap to generate a heatmap
 heatmap(df, scale="none", col = col, Colv=NA, Rowv=NA)
+
+# pheatmap
+pheatmap(df, cutree_rows = 4, fontsize_row=5, fontsize_col=7)
