@@ -8,8 +8,10 @@ data <- read.csv(PATH, header=TRUE)
 
 # use the death and hospitalize increase 
 # for understanding the relationship between patience hospitalized and patient dying
-relation <- lm(data$death~data$hospitalizedIncrease)
+relation <- lm(data$death~data$hospitalizedIncrease+ data$onVentilatorCumulative+data$positiveIncrease, data)
 summary(relation)
 
-# how to generate regression plot 
-plot(data$death, data$hospitalizedIncrease, col="blue", main="Death & Patients Hospitalized Regression", abline(lm(data$hospitalizedIncrease~data$death)), cex=1.3, pch=16, xlab="Deaths", ylab="Patients Hospitalized")
+# What will happen to the number of deaths, if the hospitalized patients are say 1000 for next month?
+# Below we create a data frame called A
+A <- data.frame(x=1000)
+result <- predict(relation, A)
