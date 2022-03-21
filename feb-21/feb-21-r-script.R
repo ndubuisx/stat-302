@@ -10,14 +10,15 @@ heatmap(df, scale = "none", col =  col, Colv=NA, Rowv=NA,
         ColSideColors = c(rep("purple", 5), rep("orange", 6)))
 
 # use gplots library to generate a heatmap
-
 # install.packages('gplots')
 library('gplots')
-
 heatmap.2(df, scale='none', col = bluered(100), trace='none', density.info='none')
+
+# remove dendrogram
+heatmap(df, scale = "none", col = col, RowSideColors = rep(c("blue","pink"), each = 16), ColSideColors = c(rep("purple",5),rep("orange",6)),Colv=NA, Rowv=NA)
+
 
 # using library pheatmap
 # install.packages('pheatmap')
 library('pheatmap')
-
 pheatmap(df, cutree_rows = 4)
