@@ -7,4 +7,6 @@ x <- seq(-10, 10, by = .1)
 y <- dnorm(x, mean=2.5, sd=0.5)
 
 # plot x and y to generate a scatter plot for normal distribution curve
-plot(x, y)
+plot(x, y, col = "blue")
+
+legend("topleft", legend=c("Dummy Data"), col=c("blue"), pch=3, cex=0.8)
