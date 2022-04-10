@@ -1,0 +1,11 @@
+1. What is dnorm()?
+
+dnorm() is a function used in R programming language. The function is used to calculate the probability density function for a given normal distribution. It takes in three parameters: mean, standard deviation, and x-value. The mean and standard deviation represent the parameters of the normal distribution, while the x-value is the point at which the probability density is being calculated. The function returns the probability density at the given x-value.
+
+2. What is pnorm()?
+
+pnorm() is a function used in R programming language. The pnorm() function is used to compute the cumulative distribution function (CDF) for a given value of a random variable. The CDF is the probability that the random variable will take on a value less than or equal to the given value. The pnorm() function returns the CDF for the standard normal distribution.
+
+3. What is qnorm()?
+
+qnorm() is a function used in R programming language. The qnorm() function in R is a function that calculates the inverse of the cumulative distribution function for the standard normal distribution. This function takes a probability as an input and returns the corresponding value on the normal distribution. This function is useful for finding the value of a random variable that has a standard normal distribution.
